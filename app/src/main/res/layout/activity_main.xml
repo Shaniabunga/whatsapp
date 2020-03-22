@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/watsap"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"/>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/enter_msg"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="27dp"
+
+            android:layout_toLeftOf="@+id/btn_send_chat"
+            android:layout_weight="0.7"
+            android:background="@drawable/button_type_msg"
+            android:hint="Enter message"
+            android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/btn_send_chat"
+            android:layout_width="64dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="KIRIM"
+            android:textColor="#FFF"
+            android:textSize="14dp" />
+
+        <ListView
+            android:id="@+id/message_list"
+            android:layout_width="match_parent"
+            android:layout_height="580dp"
+            android:layout_above="@+id/enter_msg"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="alwaysScroll" />
+
+    </RelativeLayout>
+</LinearLayout>
